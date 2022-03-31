@@ -22,7 +22,7 @@ const SoloSneakerComponent = (props) => {
    
      const submitUpdateItem = (e) => {
          e.preventDefault();
-         console.log("updatingItem!")
+         console.log("UPDATE SUCCESSFUL")
          props.updateItem(props.item._id, updateItem)
          setShowing(false)
      }
@@ -31,7 +31,7 @@ const SoloSneakerComponent = (props) => {
       <h2>{props.item.shoeName}</h2>
       <div  className='sneaker-details'>
           <p>Brand: {props.item.brand}</p>
-          <img src={props.item.img}></img>
+          <img src={props.item.img} alt={props.item.shoeName}></img>
          <p>Description: {props.item.description}</p>
       </div> 
       

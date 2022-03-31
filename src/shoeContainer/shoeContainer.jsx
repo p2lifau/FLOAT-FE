@@ -18,6 +18,7 @@ const ShoeContainer = () => {
         })
           // parse the response from the back-end
           const parsedResponse = await apiResponse.json()
+          console.log(parsedResponse)
           // If the response is success:
           if(parsedResponse.success){
             // Add the new item to state!
