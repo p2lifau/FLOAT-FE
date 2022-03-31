@@ -42,10 +42,10 @@ const NewSneakerComponent = (props) => {
                  })
 
              }}>   
-                Shoe Name: <input minLength={3} required   onChange={handleInputChange} type="text" name='shoeName' />
-                Brand: <input required onChange={handleInputChange} type="text" name='brand' />
-                Image: <input  onChange={handleInputChange} type="text" name='img' />
-                Description: <input required onChange={handleInputChange} type="text" name='description' />
+                Shoe Name: <input minLength={3} required   onChange={handleInputChange} type="text" name='shoeName' value={newItem.shoeName} />
+                Brand: <input required onChange={handleInputChange} type="text" name='brand' value={newItem.brand}/>
+                Image: <input  onChange={handleInputChange} type="text" name='img' value={newItem.img}/>
+                Description: <input required onChange={handleInputChange} type="text" name='description' value={newItem.description}/>
                 <br />
                 <button className="sub-btn"type="submit">Submit</button>
             </form>

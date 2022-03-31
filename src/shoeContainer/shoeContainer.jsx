@@ -76,10 +76,12 @@ const ShoeContainer = () => {
     }
     useEffect(getItems, [] )
   return (
-    <div className='shoeContainerdiv'>
+    <div>
+        <div className='sneaker-headers'>
         <h2>My Sneakers</h2>
         <NewSneakerComponent  
         createNewItem={createNewItem}></NewSneakerComponent>
+        </div>
         {/* map through the api data*/}
         {items.reverse().map((item)=> {
            return <SoloSneakerComponent key={item._id} item={item} deleteItem={deleteItem} updateItem={updateItem}></SoloSneakerComponent>
