@@ -28,16 +28,11 @@ const SoloSneakerComponent = (props) => {
      }
   return (
     <div className='solo-sneaker'>
-        <div  className='sneaker-details'>
-            <div className="shoeNbrand">
           <h2>{props.item.shoeName}</h2>
           <p>Brand: {props.item.brand}</p>
-          </div>
           <img src={props.item.img} alt={props.item.shoeName}></img>
          <p>Description: {props.item.description}</p>
-      </div> 
       
-    
     <button className="delete-btn" onClick={()=>{
         props.deleteItem(props.item._id)
     }}>Delete</button>
