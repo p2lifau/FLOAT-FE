@@ -1,12 +1,19 @@
-import logo from './logo.svg';
+import logo from './sneakerLabLOGO.jpeg';
 import './App.css';
-import ItemContainer from './itemContainer/itemContainer';
+import ShoeContainer from './shoeContainer/shoeContainer';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>sneakerFLOAT</h1>
-      <ItemContainer></ItemContainer>
+      <nav className='navbar'>
+       <img className="logo"src={logo} alt='logo'></img>
+       <div className='nav-links'>
+       <a href='#'>Home</a>
+       <a href='#'>Test</a>
+       </div>
+      </nav>
+      <ShoeContainer></ShoeContainer>
     </div>
   );
 }

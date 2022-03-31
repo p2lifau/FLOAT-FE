@@ -1,12 +1,11 @@
 // our stateful component
 import {useEffect, useState} from 'react'
-import SingleItemComponent from './singleItemComponent/singleItemComponent'
-import NewItemComponent from '../newItemComponent/newItemComponent'
+import SoloSneakerComponent from './soloSneakerComponent/soloSneakerComponent'
+import NewSneakerComponent from '../newSneakerComponent/newSneakerComponent'
 
-const ItemContainer = () => {
+const ShoeContainer = () => {
     const [requestError, setRequestError] = useState("");
     const [items, setItems] = useState([])
-    // const [newItemServerError, setNewItemServerError] = useState("")
     // this function using to life state from child to parent
     const createNewItem =  async (newItem) => {
         // Send a request to our back-end , make sure your local host is CORRECT
@@ -34,19 +33,7 @@ const ItemContainer = () => {
             })
             const parsedResponse = await apiResponse.json()
             if(parsedResponse.success){
-                        // const newItems = [];
-                // for(let i = 0; i < items.length; i++){
-                //     if(items[i]._id !== itemId){
-                //         newItems.push(items[i])
-                //     }
-                // }
-                
-                // this function creates a new array of all the things that return true
-                // using the filter method
-                // const newItems = items.filter((item)=>{
-                //     return item._id !== idToDelete
-                // })
-        
+          
                 const newItems = items.filter(item => item._id !== idToDelete)
                 setItems(newItems)
             } else {
@@ -70,14 +57,7 @@ const ItemContainer = () => {
     }
     // 
     const updateItem = async (idToUpdate, itemToUpdate) => {
-        // const newItems = [];
-        // for(let i = 0; i <items.length; i++){
-        //     if(items[i]._id === idToUpdate._id){
-        //         newItems[i] = itemToUpdate
-        //     } else {
-        //         newItems.push(items[i])
-        //     }
-        // }
+      
         const apiResponse = await fetch(`http://localhost:4000/items/${idToUpdate}`, {
             method: "PUT",
             body: JSON.stringify(itemToUpdate),
@@ -95,16 +75,16 @@ const ItemContainer = () => {
     }
     useEffect(getItems, [] )
   return (
-    <div>
+    <div className='shoeContainerdiv'>
         <h2>My Sneakers</h2>
-        <NewItemComponent  
-        createNewItem={createNewItem}></NewItemComponent>
+        <NewSneakerComponent  
+        createNewItem={createNewItem}></NewSneakerComponent>
         {/* map through the api data*/}
         {items.reverse().map((item)=> {
-           return <SingleItemComponent key={item._id} item={item} deleteItem={deleteItem} updateItem={updateItem}></SingleItemComponent>
+           return <SoloSneakerComponent key={item._id} item={item} deleteItem={deleteItem} updateItem={updateItem}></SoloSneakerComponent>
         })}
     </div>
   )
 }
 
-export default ItemContainer
+export default ShoeContainer

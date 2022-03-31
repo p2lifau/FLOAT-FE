@@ -1,6 +1,6 @@
 import { useState } from "react"
 // new component for new items
-const NewItemComponent = (props) => {
+const NewSneakerComponent = (props) => {
     const [showing, setShowing] = useState(false);
 // this state keeps track of what the user has put into the form
 // thats going to build this object as the user updates the form 
@@ -10,7 +10,7 @@ const NewItemComponent = (props) => {
         img: "",
         description: ""
     });
-    // const [isvalidState, setIsValidState] = useState({valid: true}, {message: ""})
+
     // write a function set updates to its opposite
     const toggleShowing = () => {
         setShowing(!showing)
@@ -23,7 +23,6 @@ const NewItemComponent = (props) => {
        })
     }
 
-    
   return (
       // Ternary operation on condition of showing 
         <>
@@ -31,8 +30,8 @@ const NewItemComponent = (props) => {
             showing ? 
             
             <div id='new-item-form'>
-                <button onClick={toggleShowing}>X</button>
-             <form onSubmit={(e)=>{
+                <button className="x-btn" onClick={toggleShowing}>X</button>
+             <form className="main-form" onSubmit={(e)=>{
                  e.preventDefault()
                  props.createNewItem(newItem)
                  setNewItem({
@@ -41,23 +40,21 @@ const NewItemComponent = (props) => {
                     img: "",
                     description: ""
                  })
-
              }}>   
-                
-                Shoe Name: <input minLength={3} required   onChange={handleInputChange} type="text" name='shoeName'/>
-                Brand: <input required onChange={handleInputChange} type="text" name='brand' />
-                Img: <input required onChange={handleInputChange} type="text" name='img' />
-                Description: <input required onChange={handleInputChange} type="text" name='description' />
+                Shoe Name: <input minLength={3} required   onChange={handleInputChange} type="text" name='shoeName' value={newItem.shoeName}/>
+                Brand: <input required onChange={handleInputChange} type="text" name='brand' value={newItem.brand}/>
+                Image: <input  onChange={handleInputChange} type="text" name='img' value={newItem.img}/>
+                Description: <input required onChange={handleInputChange} type="text" name='description' value={newItem.description}/>
                 <br />
-                <button type="submit">Submit</button>
+                <button className="sub-btn"type="submit">Submit</button>
             </form>
         </div>
         :
-        <button onClick={toggleShowing}>Add New Shoe</button>
+        <button className="add-btn" onClick={toggleShowing}>Add New Shoe</button>
 
         }
     </>
   )
 }
 
-export default NewItemComponent
+export default NewSneakerComponent

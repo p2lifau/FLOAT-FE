@@ -1,0 +1,64 @@
+import { useState } from "react";
+const SoloSneakerComponent = (props) => {
+    const [showing, setShowing] = useState(false);
+    const toggleShowing = () => {
+        setShowing(!showing)
+    }
+    // we want the form to start as being filled out
+    const [updateItem, setUpdateItem] = useState({
+        shoeName: props.item.shoeName,
+        brand: props.item.brand,
+        img: props.item.img,
+        description: props.item.description,
+        _id: props.item._id
+    });
+   // this function handles all input changes and updates our updateItem state
+    const handleInputChange = (e) => {
+        setUpdateItem({
+            ...updateItem,
+            [e.target.name]: e.target.value
+        })
+     }
+   
+     const submitUpdateItem = (e) => {
+         e.preventDefault();
+         console.log("updatingItem!")
+         props.updateItem(props.item._id, updateItem)
+         setShowing(false)
+     }
+  return (
+    <div className='solo-sneaker'>
+      <h2>{props.item.shoeName}</h2>
+      <div  className='sneaker-details'>
+          <p>Brand: {props.item.brand}</p>
+          <img src={props.item.img}></img>
+         <p>Description: {props.item.description}</p>
+      </div> 
+      
+    
+    <button className="delete-btn" onClick={()=>{
+        props.deleteItem(props.item._id)
+    }}>Delete</button>
+    {
+        showing ? 
+        <div id="edit-sneaker-form">
+        <button className="x-btn" onClick={toggleShowing}>X</button>
+        <form className="sneaker-edits" onSubmit={submitUpdateItem}>
+           <input minLength={3} required   onChange={handleInputChange} type="text" name='shoeName' placeholder="Shoe Name" value={updateItem.shoeName}/>
+                <input required onChange={handleInputChange} type="text" name='brand' placeholder="Brand" value={updateItem.brand}/>
+                <input  onChange={handleInputChange} type="text" name='img' placeholder="Image" value={updateItem.img}/>
+                <input required onChange={handleInputChange} type="text" name='description' placeholder="Description" value={updateItem.description}/>
+           <button className="sub-btn" type="submit">Submit</button>
+       </form>
+       </div>
+       :
+       <button className="edit-btn" onClick={toggleShowing}>Edit this item</button>
+    }
+    <>
+    </>
+  
+    </div>
+  )
+}
+
+export default SoloSneakerComponent
