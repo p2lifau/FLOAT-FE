@@ -49,7 +49,7 @@ const NewSneakerComponent = (props) => {
                 <br />
                 <button className="sub-btn"type="submit">Submit</button>
             </form>
-        </div>
+            </div>
         :
         <button className="add-btn" onClick={toggleShowing}>Add New Shoe</button>
 
