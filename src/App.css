@@ -26,12 +26,20 @@
   color: black;
 }
 
+.solo-sneaker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .sneaker-headers {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 /* BUTTONS */
 .add-btn {
   background-color: #61dafb;

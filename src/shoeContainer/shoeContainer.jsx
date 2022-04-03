@@ -9,7 +9,7 @@ const ShoeContainer = () => {
     // this function using to life state from child to parent
     const createNewItem =  async (newItem) => {
         // Send a request to our back-end , make sure your local host is CORRECT
-        const apiResponse = await fetch("http://localhost:4000/items",{
+        const apiResponse = await fetch("https://sneakerfloatbackend.herokuapp.com/",{
             method: "POST",
             body: JSON.stringify(newItem),
             headers: {
@@ -29,7 +29,7 @@ const ShoeContainer = () => {
     // our function that modifies state
     const deleteItem = async (idToDelete) => {
         try {
-            const apiResponse = await fetch(`http://localhost:4000/items/${idToDelete}`, {
+            const apiResponse = await fetch(`https://sneakerfloatbackend.herokuapp.com/${idToDelete}`, {
                 method: "DELETE"
             })
             const parsedResponse = await apiResponse.json()
@@ -49,7 +49,7 @@ const ShoeContainer = () => {
     // this function fetches our items from the server
     const getItems = async () => {
         try {
-            const items = await fetch ("http://localhost:4000/items")
+            const items = await fetch ("https://sneakerfloatbackend.herokuapp.com/")
             const parsedItems = await items.json();
             setItems(parsedItems.data)
         } catch(err){
@@ -59,7 +59,7 @@ const ShoeContainer = () => {
     // 
     const updateItem = async (idToUpdate, itemToUpdate) => {
       
-        const apiResponse = await fetch(`http://localhost:4000/items/${idToUpdate}`, {
+        const apiResponse = await fetch(`https://sneakerfloatbackend.herokuapp.com/${idToUpdate}`, {
             method: "PUT",
             body: JSON.stringify(itemToUpdate),
             headers: {
