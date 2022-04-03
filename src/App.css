@@ -74,6 +74,13 @@
   margin-top: 1rem;
 }
 
+.solo-sneaker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .x-btn {
   background-color: #61dafb;
   color: white;
