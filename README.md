@@ -26,6 +26,12 @@ Sneaker
 - img: String
 - description: String
 
+## FUTURE FEATURES
+
+- User Login so everyone can have a unique experience
+- API for users to search sneakers in database, add, edit
+- Use Bootstrap for React
+
 ## General Assembly Project Requirements
 
 - A working full-stack application, built by you, using the MERN stack: Node.js, Mongoose, Express and ReactA working full-stack application, built by you, using the MERN stack: Node.js, Mongoose, Express and React.
