@@ -37,9 +37,7 @@ const ShoeContainer = () => {
           
                 const newItems = items.filter(item => item._id !== idToDelete)
                 setItems(newItems)
-            } else {
-                // Todo: handle an unsuccessful delete
-            }
+            } 
         }catch(err){
             console.log(err)
         }
@@ -48,6 +46,7 @@ const ShoeContainer = () => {
     }
     // this function fetches our items from the server
     const getItems = async () => {
+        console.log('get anything')
         try {
             const items = await fetch ("https://sneakerfloatbackend.herokuapp.com/items")
             const parsedItems = await items.json();
@@ -75,7 +74,7 @@ const ShoeContainer = () => {
         } 
         
     }
-    useEffect(getItems, [])
+    useEffect(getItems, []);
   return (
     <div>
         <div className='sneaker-headers'>
