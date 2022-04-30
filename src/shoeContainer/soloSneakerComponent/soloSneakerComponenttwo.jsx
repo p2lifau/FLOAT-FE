@@ -1,6 +1,9 @@
 import { useState } from "react";
-
-const SoloSneakerComponent = (props) => {
+// import Card from "react-bootstrap/Card";
+// import Offcanvas from "react-bootstrap/Offcanvas";
+// import Button from "react-bootstrap/Button";
+// import "./singleSongComponent.css";
+const SoloSneakerComponenttwo = (props) => {
     const [showing, setShowing] = useState(false);
     const toggleShowing = () => {
         setShowing(!showing)
@@ -28,6 +31,7 @@ const SoloSneakerComponent = (props) => {
          setShowing(false)
      }
   return (
+      
     <div className='solo-sneaker'>
         <div className="sneaker-card">
           <img src={props.item.img} alt={props.item.shoeName}></img>
@@ -35,26 +39,27 @@ const SoloSneakerComponent = (props) => {
           <p>{props.item.brand}</p>
           <p>Release Date: {props.item.description}</p>
           </div>
-         
-         
-      
+    <div className="btn-container">
     <button id="delete-btn"onClick={()=>{
         props.deleteItem(props.item._id)
     }}>Delete</button>
+    <button id="edit-btn" onClick={toggleShowing}>Edit</button>
+    </div>
     {
         showing ? 
         <div id="edit-sneaker-form">
         <button className="x-btn" onClick={toggleShowing}>X</button>
         <form className="sneaker-edits" onSubmit={submitUpdateItem}>
-           <input minLength={3} required   onChange={handleInputChange} type="text" name='shoeName' placeholder="Shoe Name" value={updateItem.shoeName}/>
-                <input required onChange={handleInputChange} type="text" name='brand' placeholder="Brand" value={updateItem.brand}/>
-                <input  onChange={handleInputChange} type="text" name='img' placeholder="Image" value={updateItem.img}/>
-                <input required onChange={handleInputChange} type="text" name='description' placeholder="Description" value={updateItem.description}/>
+           <input  minLength={3} required   onChange={handleInputChange} type="text" name='shoeName' placeholder="Shoe Name" value={updateItem.shoeName}/>
+            <input required onChange={handleInputChange} type="text" name='brand' placeholder="Brand" value={updateItem.brand}/>
+            <input  onChange={handleInputChange} type="text" name='img' placeholder="Image" value={updateItem.img}/>
+            <input required onChange={handleInputChange} type="text" name='description' placeholder="Description" value={updateItem.description}/>
            <button className="sub-btn" type="submit">Submit</button>
        </form>
        </div>
        :
-       <button id="edit-btn" onClick={toggleShowing}>Edit</button>
+       ""
+       
     }
     <>
     </>
@@ -64,4 +69,4 @@ const SoloSneakerComponent = (props) => {
   )
 }
 
-export default SoloSneakerComponent
+export default SoloSneakerComponenttwo

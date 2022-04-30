@@ -1,9 +1,10 @@
 // our stateful component
+import "./songContainer.css"
 import {useState, useEffect} from 'react'
-import SoloSneakerComponent from './soloSneakerComponent/soloSneakerComponent'
+import SoloSneakerComponenttwo from "./soloSneakerComponent/soloSneakerComponenttwo"
 import NewSneakerComponent from '../newSneakerComponent/newSneakerComponent'
 
-const ShoeContainer = () => {
+const ShoeContainertwo = () => {
     // const webUrl = 'https://localhost:4000/items';
     // const webUrl = 'https://sneakerfloatbackend.herokuapp.com/items';
     // const [requestError, setRequestError] = useState("");
@@ -80,20 +81,34 @@ const ShoeContainer = () => {
     useEffect(getItems, []);
    
   return (
-    <div className='shoe-container'>
-        <div className='sneaker-headers'>
-        <h2 className='my-sneakers'>Sneaker Shelf</h2>
+    <div className='song-container'>
+        
+
+        <div className="songs-wrapper">
+        <div className='sneaker-title'>
+        <h2 className='my-sneakers'>Sneaker List</h2>
+        <div className="new-container">
         <NewSneakerComponent  
-        createNewItem={createNewItem}></NewSneakerComponent>
+        createNewItem={createNewItem}>
+        </NewSneakerComponent>
         </div>
-        {/* map through the api data*/}
-        <div className="element">
-        {items.reverse().map((item)=> {
-           return <SoloSneakerComponent key={item._id} item={item} deleteItem={deleteItem} updateItem={updateItem}></SoloSneakerComponent>
+        </div>
+        <div className="songs-container">
+        {items.map((item)=> {
+           return (
+           <SoloSneakerComponenttwo 
+           key={`sneaker- ${item._id}`} 
+           item={item} 
+           deleteItem={deleteItem} 
+           updateItem={updateItem}
+           ></SoloSneakerComponenttwo>
+           )
         })}
         </div>
-    </div>
+        </div>
+        
+        </div>
   )
 }
 
-export default ShoeContainer
+export default ShoeContainertwo

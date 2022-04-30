@@ -1,19 +1,17 @@
-import logo from './sneakerLabLOGO.jpeg';
+// import logo from './goatHeader.jpeg';
 import './App.css';
-import ShoeContainer from './shoeContainer/shoeContainer';
+import Navbar from './Header/Navbar';
+import Footer from './Footer/Footer';
+// import ShoeContainer from './shoeContainer/shoeContainer';
+import ShoeContainertwo from './shoeContainer/ShoeContainertwo';
 
 
 function App() {
   return (
     <div className="App">
-      <nav className='navbar'>
-       <img className="logo"src={logo} alt='logo'></img>
-       <div className='nav-links'>
-       <a href='#'>Home</a>
-       <a href='#'>Test</a>
-       </div>
-      </nav>
-      <ShoeContainer></ShoeContainer>
+       <Navbar/>
+      <ShoeContainertwo></ShoeContainertwo>
+      <Footer/>
     </div>
   );
 }
