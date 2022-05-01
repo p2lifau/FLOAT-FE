@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './jordan1-BIG.webp'
+import logo from './goatHeader.jpeg'
 const Navbar = () => {
   return (
       <div>

@@ -2,6 +2,7 @@
 import {useState, useEffect} from 'react'
 import SoloSneakerComponent from './soloSneakerComponent/soloSneakerComponent'
 import NewSneakerComponent from '../newSneakerComponent/newSneakerComponent'
+import "./songContainer.css"
 
 const ShoeContainer = () => {
     // const webUrl = 'https://localhost:4000/items';

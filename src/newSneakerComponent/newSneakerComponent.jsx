@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Modal from 'react-modal' 
+import Modal from 'react-modal'
 // new component for new items
 const NewSneakerComponent = (props) => {
     const [showing, setShowing] = useState(false);
@@ -29,11 +29,7 @@ const NewSneakerComponent = (props) => {
         <>
         {
             showing ? 
-            <Modal 
-            isOpen={true}
-            ariaHideApp={false}
-            shouldCloseOnOverlayClick={true}
-            >
+            <Modal isOpen={true}>
             <div id='new-sneaker-form'>
                 <button className="x-btn" onClick={toggleShowing}>X</button>
              <form className="main-form" onSubmit={(e)=>{
@@ -55,7 +51,8 @@ const NewSneakerComponent = (props) => {
                 <br />
                 <button className="sub-btn"type="submit">Submit</button>
             </form>
-            </div></Modal>
+            </div>
+            </Modal>
             
         :
         <button className="add-btn" onClick={toggleShowing}>Add New Shoe</button>

@@ -1,8 +1,5 @@
 import { useState } from "react";
-// import Card from "react-bootstrap/Card";
-// import Offcanvas from "react-bootstrap/Offcanvas";
-// import Button from "react-bootstrap/Button";
-// import "./singleSongComponent.css";
+
 const SoloSneakerComponenttwo = (props) => {
     const [showing, setShowing] = useState(false);
     const toggleShowing = () => {
@@ -33,12 +30,12 @@ const SoloSneakerComponenttwo = (props) => {
   return (
       
     <div className='solo-sneaker'>
-        <div className="sneaker-card">
-          <img src={props.item.img} alt={props.item.shoeName}></img>
-          <h3>{props.item.shoeName}</h3>
-          <p>{props.item.brand}</p>
-          <p>Release Date: {props.item.description}</p>
-          </div>
+    <div className="sneaker-card">
+    <img className="snkr-img"  src={props.item.img} alt={props.item.shoeName}></img>
+    <h5>{props.item.shoeName}</h5>
+     <p>{props.item.brand}</p>
+     <p>{props.item.description}</p>
+     </div>
     <div className="btn-container">
     <button id="delete-btn"onClick={()=>{
         props.deleteItem(props.item._id)
@@ -61,8 +58,7 @@ const SoloSneakerComponenttwo = (props) => {
        ""
        
     }
-    <>
-    </>
+    
   
     </div>
  

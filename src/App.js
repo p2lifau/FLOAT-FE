@@ -9,8 +9,9 @@ import ShoeContainertwo from './shoeContainer/ShoeContainertwo';
 function App() {
   return (
     <div className="App">
-       <Navbar/>
+      <Navbar/>
       <ShoeContainertwo></ShoeContainertwo>
+
       <Footer/>
     </div>
   );

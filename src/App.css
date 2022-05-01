@@ -1,20 +1,11 @@
-
-
-
 /* .app {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 } */
 
-
 /*NavBar*/
 .navbar {
-  /* background-color: rgba(33,33,33,.7);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px; */
   background: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: black;
@@ -31,12 +22,11 @@
 }
 
 .float-logo {
-  font-weight:500;
+  font-weight: 500;
 }
 
 .goat-header {
   width: 100vw;
-  height: 80vh;
 }
 
 .nav-links {
@@ -44,7 +34,6 @@
   gap: 1rem;
   align-items: center;
   padding: 10px;
-  
 }
 
 li {
@@ -55,25 +44,8 @@ li {
   color: black;
 }
 
-.solo-sneaker {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.sneaker-headers {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .my-sneakers {
   color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* BUTTONS */
@@ -83,10 +55,20 @@ li {
   padding: 10px 15px;
   margin-bottom: 4rem;
 }
+
+.add-btn:hover {
+  cursor: pointer;
+  background-color: #2eb0d4;
+}
 .sub-btn {
   background-color: #61dafb;
   border: 0;
   padding: 10px 20px;
+}
+
+.sub-btn:hover {
+  background-color: #2eb0d4;
+  cursor: pointer;
 }
 
 #delete-btn {
@@ -96,10 +78,18 @@ li {
   margin: 1rem;
 }
 
+#delete-btn:hover {
+  cursor: pointer;
+}
+
 #edit-btn {
   background-color: aquamarine;
   border: 0;
   padding: 10px 15px;
+}
+
+#edit-btn:hover {
+  cursor: pointer;
 }
 .main-form {
   display: flex;
@@ -119,50 +109,29 @@ li {
   margin-top: 1rem;
 }
 
-.sneaker-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
-.solo-sneaker {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-
-}
-
 .x-btn {
   background-color: #61dafb;
   color: white;
   border: 0;
 }
 
-/* img {
-  width: 65%;
-} */
+.x-btn:hover {
+  cursor: pointer;
+  background-color: #2eb0d4;
+}
 
 img {
   width: 150px;
 }
-.element {
-  /* margin-block: 2rem; */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-}
 
-.footer-links{
+.footer-links {
   display: flex;
   gap: 2rem;
 }
 
-
+.icon-cog {
+  color: black;
+}
 
 .footer-container {
   display: flex;
@@ -170,8 +139,51 @@ img {
   padding: 20px;
   margin: 30px;
 }
-
+.sneaker-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .new-container {
   display: flex;
   justify-content: center;
+}
+.snkr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .snkr-indx {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+.songs-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+/* .element {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+} */
+
+.solo-sneaker {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
 }

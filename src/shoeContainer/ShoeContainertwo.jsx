@@ -1,8 +1,8 @@
 // our stateful component
-import "./songContainer.css"
+
 import {useState, useEffect} from 'react'
 import SoloSneakerComponenttwo from "./soloSneakerComponent/soloSneakerComponenttwo"
-import NewSneakerComponent from '../newSneakerComponent/newSneakerComponent'
+import NewSneakerComponenttwo from "../newSneakerComponent/NewSneakerComponenttwo"
 
 const ShoeContainertwo = () => {
     // const webUrl = 'https://localhost:4000/items';
@@ -88,9 +88,9 @@ const ShoeContainertwo = () => {
         <div className='sneaker-title'>
         <h2 className='my-sneakers'>Sneaker List</h2>
         <div className="new-container">
-        <NewSneakerComponent  
+        <NewSneakerComponenttwo
         createNewItem={createNewItem}>
-        </NewSneakerComponent>
+        </NewSneakerComponenttwo>
         </div>
         </div>
         <div className="songs-container">
@@ -108,6 +108,8 @@ const ShoeContainertwo = () => {
         </div>
         
         </div>
+        
+        
   )
 }
 
