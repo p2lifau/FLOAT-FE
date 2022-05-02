@@ -1,6 +1,6 @@
 // our stateful component
 import {useState, useEffect} from 'react'
-import NewSneakerComponent from '../newSneakerComponent/NewSneakerComponent'
+import NewSneakerComponent from '../newSneakerComponent/newSneakerComponent'
 import SoloSneakerComponent from './soloSneakerComponent/soloSneakerComponent'
 
 const ShoeContainertwo = () => {
