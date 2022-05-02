@@ -1,8 +1,10 @@
 import { useState } from "react"
 import Modal from 'react-modal'
 // new component for new items
+Modal.setAppElement('#root')
 const NewSneakerComponent = (props) => {
-    const [showing, setShowing] = useState(false);
+    
+    const [modalIsOpen, isOpen] = useState(false);
 // this state keeps track of what the user has put into the form
 // thats going to build this object as the user updates the form 
     const [newItem, setNewItem] = useState({
@@ -14,7 +16,7 @@ const NewSneakerComponent = (props) => {
 
     // write a function set updates to its opposite
     const toggleShowing = () => {
-        setShowing(!showing)
+        isOpen(!modalIsOpen)
     }
     // this function handles all input changes and updates our newItem State
     const handleInputChange = (e) => {
@@ -27,13 +29,27 @@ const NewSneakerComponent = (props) => {
   return (
       // Ternary operation on condition of showing 
         <>
-        {
-            showing ? 
-            <Modal isOpen={true}>
+        
+            <Modal isOpen={modalIsOpen}
+                ClassName={'Modal'}
+                // style={
+                //     {
+                        
+                //         content: {
+                //             width: 600,
+                //             height: 300,
+                //             left: 400,
+                //             top: 200
+                //         }
+                //     }
+                // }
+            >
             <div id='new-sneaker-form'>
-                <button className="x-btn" onClick={toggleShowing}>X</button>
+            
+            <button className="x-btn" onClick={toggleShowing}>X</button>
              <form className="main-form" onSubmit={(e)=>{
                  e.preventDefault()
+                 toggleShowing()
                  props.createNewItem(newItem)
                  setNewItem({
                     shoeName: "",
@@ -41,23 +57,23 @@ const NewSneakerComponent = (props) => {
                     img: "",
                     description: ""
                  })
-
-             }}>   
-             
-                Shoe Name: <input minLength={3} required   onChange={handleInputChange} type="text" name='shoeName' value={newItem.shoeName} />
-                Brand: <input required onChange={handleInputChange} type="text" name='brand' value={newItem.brand}/>
-                Image: <input  onChange={handleInputChange} type="text" name='img' value={newItem.img}/>
-                Description: <input required onChange={handleInputChange} type="text" name='description' value={newItem.description}/>
-                <br />
-                <button className="sub-btn"type="submit">Submit</button>
+             }}> 
+             <h3>Add New Shoe</h3> 
+        <input minLength={3} required   onChange={handleInputChange} type="text" name='shoeName' value={newItem.shoeName} placeholder="Shoe Name"/>
+        <input required onChange={handleInputChange} type="text" name='brand' value={newItem.brand} placeholder="Brand"/>
+        <input  onChange={handleInputChange} type="text" name='img' value={newItem.img} placeholder="Image"/>
+        <input required onChange={handleInputChange} type="text" name='description' value={newItem.description} placeholder="Release Date"/>
+        <br />
+        <button className="sub-btn"type="submit">Submit</button>
             </form>
             </div>
             </Modal>
+            <button className="add-btn" onClick={toggleShowing}>Add New Shoe</button>
             
-        :
-        <button className="add-btn" onClick={toggleShowing}>Add New Shoe</button>
+      
+        
 
-        }
+     
         
         
     </>

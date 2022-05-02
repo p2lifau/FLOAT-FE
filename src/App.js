@@ -2,16 +2,15 @@
 import './App.css';
 import Navbar from './Header/Navbar';
 import Footer from './Footer/Footer';
-// import ShoeContainer from './shoeContainer/shoeContainer';
-import ShoeContainertwo from './shoeContainer/ShoeContainertwo';
+import ShoeContainer from './shoeContainer/shoeContainer';
+
 
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <ShoeContainertwo></ShoeContainertwo>
-
+      <ShoeContainer></ShoeContainer>
       <Footer/>
     </div>
   );

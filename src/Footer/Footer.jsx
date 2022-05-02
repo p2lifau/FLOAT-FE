@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='footer-container'>
-      <h4>©Copyright 2022. FLOAT Inc.</h4>
+      <h4>Copyright © 2022 FLOAT, Inc.</h4>
       
       <ul className="footer-links">
             <li><a href="#"><i className=" icon-cog fa fa-twitter fa-2x"></i></a></li>
