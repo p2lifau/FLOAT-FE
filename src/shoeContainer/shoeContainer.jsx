@@ -5,7 +5,7 @@ import SoloSneakerComponent from './soloSneakerComponent/soloSneakerComponent'
 
 const ShoeContainertwo = () => {
     // const webUrl = 'https://localhost:4000/items';
-    const webUrl = 'https://sneakerfloatbackend.herokuapp.com/items';
+    // const webUrl = 'https://sneakerfloatbackend.herokuapp.com/items';
     const [items, setItems] = useState([])
     // this function using to life state from child to parent
     const createNewItem =  async (newItem) => {
@@ -92,7 +92,7 @@ const ShoeContainertwo = () => {
         </div>
         </div>
         <div className="songs-container">
-        {items.map((item)=> {
+        {items.reverse().map((item)=> {
            return (
            <SoloSneakerComponent 
            key={`sneaker- ${item._id}`} 

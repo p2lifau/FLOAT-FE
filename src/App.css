@@ -208,4 +208,21 @@
     display: flex;
     flex-direction: column;
   }
+
+  .float-logo {
+    font-weight: lighter;
+  }
+
+  .add-btn {
+    font-weight: lighter;
+  }
+
+  .solo-sneaker {
+    padding: 1rem;
+    margin: 0.2rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
 }
