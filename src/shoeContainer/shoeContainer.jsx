@@ -79,10 +79,10 @@ const ShoeContainertwo = () => {
     useEffect(getItems, []);
    
   return (
-    <div className='song-container'>
+    <div className='shoe-container'>
         
 
-        <div className="songs-wrapper">
+        
         <div className='sneaker-title'>
         <h2 className='my-sneakers'>Sneaker List</h2>
         <div className="new-container">
@@ -91,7 +91,7 @@ const ShoeContainertwo = () => {
         </NewSneakerComponent>
         </div>
         </div>
-        <div className="songs-container">
+        <div className="sneakers-container">
         {items.reverse().map((item)=> {
            return (
            <SoloSneakerComponent 
@@ -105,7 +105,7 @@ const ShoeContainertwo = () => {
         </div>
         </div>
         
-        </div>
+       
         
         
   )

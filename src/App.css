@@ -168,7 +168,7 @@
     margin: 1rem;
   }
 
-  .songs-container {
+  .sneakers-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
@@ -190,7 +190,7 @@
 }
 
 @media all and (max-width: 1200px) {
-  .songs-container {
+  .sneakers-container {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -204,7 +204,7 @@
 }
 
 @media all and (max-width: 900px) {
-  .songs-container {
+  .sneakers-container {
     display: flex;
     flex-direction: column;
   }
