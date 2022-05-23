@@ -7,7 +7,11 @@ This app allows you to list sneakers of any kind. The Perfect App for any sneake
 ## BackEnd [sneakerLab App via Heroku](https://sneakerfloatbackend.herokuapp.com/items)
 ## FrontEnd[sneakerLab App via Heroku](https://sneakerfloatefrontend.herokuapp.com/)
 
+<<<<<<< HEAD
 Redesign of an o
+=======
+This is a re-do of an older project where I redesigned the front-end and implemented responsive-design
+>>>>>>> 590b10fca23b2d5496b5fcdd8b1ccace0233c93c
 
 ## P3 Before Screenshot<img width="1440" alt="Screen Shot 2022-05-01 at 8 54 55 PM" src="https://user-images.githubusercontent.com/65685909/166190797-84e3de15-c883-484d-9b63-45a4d7c3ebe8.png">
 
