@@ -11,11 +11,11 @@ This app allows you to list sneakers of any kind. The Perfect App for any sneake
 This is a re-do of an older project where I redesigned the front-end and implemented responsive-design
 
 
-## P3 Before Screenshot<img width="1440" alt="Screen Shot 2022-05-01 at 8 54 55 PM" src="https://user-images.githubusercontent.com/65685909/166190797-84e3de15-c883-484d-9b63-45a4d7c3ebe8.png">
+## Before Screenshot<img width="1440" alt="Screen Shot 2022-05-01 at 8 54 55 PM" src="https://user-images.githubusercontent.com/65685909/166190797-84e3de15-c883-484d-9b63-45a4d7c3ebe8.png">
 
 
 
-## Capstone After Screenshot
+##  After Screenshot
 <img width="1440" alt="Screen Shot 2022-05-01 at 10 38 57 PM" src="https://user-images.githubusercontent.com/65685909/166190937-6079f775-91eb-44cd-b4b4-33dd97128a68.png">
 <img width="1440" alt="Screen Shot 2022-05-01 at 10 39 15 PM" src="https://user-images.githubusercontent.com/65685909/166190950-bcab8f8c-60dc-4ee1-9a4a-3e73f33c33c6.png">
 
